@@ -1,0 +1,7 @@
+
+<%= simple_form_for(@attachment) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+    <%= f.input :file, as: :file, class: "form-control-file" %>
+    <%= f.submit 'Upload data', class: "btn btn-success" %>
+<% end %>

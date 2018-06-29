@@ -1,0 +1,14 @@
+
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col col-md-auto"><h1>Editing Line</h1></div>
+  </div>
+  <div class="row">
+    <div class="col-md-4"><%= render 'form', line: @line %> <p></p></div>
+  </div>
+  </div>
+  <div class="row justify-content-md-center">
+    <div class="col col-md-2"></div>
+    <div class="col col-md-4"><%= link_to 'Back', attachment_line_list_path(@line.attachment), class: 'btn btn-primary' %></div>
+  </div>
+</div>

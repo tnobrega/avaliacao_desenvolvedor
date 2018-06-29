@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Upload a New File</h1>
+    </div>
+  </div>
+  <div class="row align-items-end">
+    <div class="col-md-6">
+      <%= render 'form', attachment: @attachment %>
+      <p></p>
+    </div>
+    <p></p>
+    <div class="col"><%= link_to 'See all uploaded files', attachments_path, class: "btn btn-primary" %>
+    <p></p>
+    <div class="col"><%= link_to 'Back to the DataBase', lines_path, class: "btn btn-info" %></div>
+  </div>
+</div>

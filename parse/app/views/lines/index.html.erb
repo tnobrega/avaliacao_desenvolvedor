@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col col-md-auto"><h1>Data Base</h1></div>
+  </div>
+  <div class="row">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Buyer</th>
+            <th scope="col">Description</th>
+            <th scope="col">Unit price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Total</th>
+            <th scope="col">Address</th>
+            <th scope="col">Supplier</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @lines.each do |line| %>
+            <tr>
+              <td><%= line.buyer %></td>
+              <td><%= line.description %></td>
+              <td><%= line.unit_price %></td>
+              <td><%= line.quantity %></td>
+              <td><%= line.total %></td>
+              <td><%= line.address %></td>
+              <td><%= line.supplier %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row justify-content-md-center">
+    <div class="col col-md-2"></div>
+    <div class="col col-md-4"><%= link_to 'Upload a new file', new_attachment_path, { class: "btn btn-primary" } %></div>
+    <div class="col col-md-4"><%= link_to 'See all uploaded files', attachments_path, class: "btn btn-primary" %></div>
+  </div>
+</div>
