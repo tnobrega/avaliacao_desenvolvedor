@@ -41,5 +41,7 @@ class LinesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def line_params
       params.require(:line).permit(:buyer, :description, :unit_price, :quantity, :total, :address, :supplier, :attchment_id)
+      params["line"]["total"] = (params["line"]["unit_price"].to_f * params["line"]["quantity"].to_f).to_s
+      params.require(:line).permit(:buyer, :description, :unit_price, :quantity, :total, :address, :supplier, :attchment_id)
     end
 end

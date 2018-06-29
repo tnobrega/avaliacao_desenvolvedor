@@ -9,6 +9,8 @@
 
 * `bundle install`
 
+* `yarn install`
+
 * `rails db:drop db:create db:migrate`
 
 * `rails s`

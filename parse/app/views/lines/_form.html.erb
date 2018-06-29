@@ -8,7 +8,7 @@
     <%= f.input :description %>
     <%= f.input :unit_price %>
     <%= f.input :quantity %>
-    <%= f.input :total %>
+    <%= f.input :total, as: :hidden %>
     <%= f.input :address %>
     <%= f.input :supplier %>
     <% f.association :attachment %>
